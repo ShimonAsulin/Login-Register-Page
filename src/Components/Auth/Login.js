@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components/macro";
 import Colors from "../../Utilities/Colors";
 import { createGlobalStyle } from "styled-components";
-
+import { Link } from "react-router-dom";
 
 // Colors Palette
 const {primary1Color, primary2Color, secondary1Color,blackColor, whiteColor} = Colors
@@ -146,7 +146,9 @@ const Login = () => {
           <Button>Login</Button>
         </Form>
         <SignUp>Haven't signed up yet?</SignUp>
-        <SignUpLink href="#">Sign up</SignUpLink>
+        <SignUpLink href="#">
+         <Link Link to="/Register">Register</Link>
+        </SignUpLink>
       </Box>
       </Container>
     </div>

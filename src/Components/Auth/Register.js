@@ -3,6 +3,7 @@ import styled from "styled-components/macro";
 import Colors from "../../Utilities/Colors";
 import Style from "../../Utilities/Styles";
 import { createGlobalStyle } from "styled-components";
+import { Link } from "react-router-dom";
 
 // Colors Palette
 const {
@@ -160,7 +161,9 @@ const Register = () => {
           </Form>
           <SignUp>
             <SignUpText ignUpText>Alredy signed up?</SignUpText>
-            <SignUpLink href="#">Log In</SignUpLink>
+            <SignUpLink >
+            <Link Link to="/Login">Login</Link>
+            </SignUpLink>
           </SignUp>
         </Box>
       </Container>
