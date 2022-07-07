@@ -5,6 +5,7 @@ import {
   BrowserRouter,
   Routes,
   Route, 
+  Navigate 
 } from 'react-router-dom';
 import Login from './Components/Auth/Login';
 import Register from './Components/Auth/Register';
@@ -17,6 +18,8 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="/404" element={<div>Not found</div>} />
+        <Route path="*" element={<Navigate replace to="/404" />} />
       </Routes>
 </BrowserRouter>
   </React.StrictMode>
