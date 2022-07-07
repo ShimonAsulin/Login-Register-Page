@@ -2,8 +2,8 @@ import Colors from "./Colors";
 
 const {
   primary1Color,
-  primary2Color,
-  secondary1Color,
+  // primary2Color,
+  // secondary1Color,
   // secondary2Color,
   blackColor,
   whiteColor,

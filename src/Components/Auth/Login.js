@@ -6,7 +6,7 @@ import { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
 
 // Colors Palette
-const {primary1Color, primary2Color, secondary1Color,blackColor, whiteColor} = Colors
+const {primary1Color, primary2Color, secondary1Color, whiteColor} = Colors
 
 const GlobalStyle = createGlobalStyle`
   body, * {
@@ -38,11 +38,8 @@ const SubTitle = styled.h5`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-`
-
-const Input = styled.input`
-  ${Style.Input}
 `;
+
 const InputPassword = styled.input`
   ${Style.Input}
 `;
