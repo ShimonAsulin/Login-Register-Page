@@ -16,8 +16,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
         <Route path="/404" element={<div>Not found</div>} />
         <Route path="*" element={<Navigate replace to="/404" />} />
       </Routes>
