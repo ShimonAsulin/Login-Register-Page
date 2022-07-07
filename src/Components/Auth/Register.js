@@ -38,7 +38,7 @@ const Box = styled.div`
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     flex-direction: column;
-    padding: .4em 1.3em;
+    padding: 1.4em;
 `;
 
 const Title = styled.h3`
@@ -69,25 +69,20 @@ const Button = styled.button`
   color: ${whiteColor};
 `;
 
-const SignUp = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 1em;
-
-`
 const SignUpText = styled.h5`
   color: ${primary1Color};
   text-align: center;
   font-weight: 500;
+  padding: 1rem;
 `;
 
 const SignUpLink = styled.a`
   color: ${primary2Color};
-  text-align: center;
   font-weight: 500;
   font-size: 0.8rem;
   text-decoration: none;
+  text-align: center;
+  
 `;
 
 
@@ -159,12 +154,10 @@ const Register = () => {
             />
             <Button>Register</Button>
           </Form>
-          <SignUp>
             <SignUpText ignUpText>Alredy signed up?</SignUpText>
             <SignUpLink >
             <Link Link to="/Login">Login</Link>
             </SignUpLink>
-          </SignUp>
         </Box>
       </Container>
     </div>
