@@ -101,7 +101,7 @@ const Register = () => {
         <Box>
           <GlobalStyle whiteColor />
           <Title>Register</Title>
-          <SubTitle>join and create projects🏆</SubTitle>
+          <SubTitle>create and join to projects🏆</SubTitle>
           <Form onSubmit={handleSubmit}>
             <InputUserName
               placeholder="Username"
