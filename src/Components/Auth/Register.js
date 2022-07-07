@@ -69,9 +69,9 @@ const SignUpLink = styled(Link)`
 
 
 const Register = () => {
-  const [formData, setFormData] = useState({
+  const [formSignUpData, setformSignUpData] = useState({
     username: "",
-    firsname: "",
+    firstname: "",
     lastname: "",
     email: "",
     password: "",
@@ -79,7 +79,7 @@ const Register = () => {
 
   function handleChange(event) {
     const { name, value } = event.target;
-    setFormData((prev) => ({
+    setformSignUpData((prev) => ({
       ...prev,
       [name]: value,
     }));
@@ -87,7 +87,7 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    console.log(formSignUpData);
   };
 
   return (
@@ -102,37 +102,43 @@ const Register = () => {
               placeholder="Username"
               name="username"
               id="username"
+              required
               onChange={handleChange}
-              value={formData.username}
+              value={formSignUpData.username}
             />
             <InputFirstName
               placeholder="Firstname"
               name="firstname"
               id="firstname"
+              required
               onChange={handleChange}
-              value={formData.firstname}
+              value={formSignUpData.firstname}
             />
             <InputLastName
               placeholder="Lastname"
               name="lastname"
               id="lastname"
               onChange={handleChange}
-              value={formData.lastname}
+              required
+              value={formSignUpData.lastname}
             />
             <InputEmail
               placeholder="Email"
               name="email"
               id="email"
               onChange={handleChange}
-              value={formData.email}
+              type="email"
+              required
+              value={formSignUpData.email}
             />
             <InputPassword
               placeholder="Password"
               type="password"
               name="password"
               id="password"
+              required
               onChange={handleChange}
-              value={formData.password}
+              value={formSignUpData.password}
             />
             <Button>Register</Button>
           </Form>

@@ -64,14 +64,14 @@ const SignUpLink = styled(Link)`
 
 const Login = () => {
   
-  const [formData, setFormData] = useState({
+  const [formLoginData, setformLoginData] = useState({
     username: "",
     password: ""
   })
 
   function handleChange(event) {
     const {name, value} = event.target
-    setFormData(prev => ({
+    setformLoginData(prev => ({
       ...prev,
       [name]: value
     })
@@ -79,7 +79,7 @@ const Login = () => {
  
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(formData);
+    console.log(formLoginData);
 }
   return (
     <div>
@@ -94,14 +94,14 @@ const Login = () => {
             name="username"
             id="username"
             onChange={handleChange}
-            value={formData.username}
+            value={formLoginData.username}
            />
           <InputPassword
             placeholder="Password" type ="password"
             name="password"
             id="password"
             onChange={handleChange}
-            value={formData.password}
+            value={formLoginData.password}
            />
           <Button>Login</Button>
         </Form>
