@@ -5,7 +5,7 @@ import {
   BrowserRouter,
   Routes,
   Route, 
-  Navigate 
+  Navigate
 } from 'react-router-dom';
 import Login from './Components/Auth/Login';
 import Register from './Components/Auth/Register';

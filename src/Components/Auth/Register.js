@@ -137,7 +137,7 @@ const Register = () => {
             <Button>Register</Button>
           </Form>
             <SignUpText ignUpText>Alredy signed up?</SignUpText>
-            <SignUpLink Link to="/Login">Login</SignUpLink> 
+            <SignUpLink to="/Login">Login</SignUpLink> 
         </Box>
       </Container>
     </div>

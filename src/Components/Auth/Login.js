@@ -106,7 +106,7 @@ const Login = () => {
           <Button>Login</Button>
         </Form>
         <SignUpText>Haven't signed up yet?</SignUpText>
-         <SignUpLink Link to="/Register">Register</SignUpLink>
+         <SignUpLink to="/Register">Register</SignUpLink>
       </Box>
       </Container>
     </div>
