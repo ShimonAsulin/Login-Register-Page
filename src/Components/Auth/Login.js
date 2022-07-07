@@ -61,7 +61,7 @@ const SignUpText = styled.h5`
 `;
 
 const SignUpLink = styled(Link)`
-  color: ${secondary1Color};
+  color: ${primary2Color};
   ${Style.SignUpLink};
 `;
 
