@@ -9,8 +9,6 @@ const {
   primary1Color,
   primary2Color,
   secondary1Color,
-  secondary2Color,
-  blackColor,
   whiteColor,
 } = Colors;
 
