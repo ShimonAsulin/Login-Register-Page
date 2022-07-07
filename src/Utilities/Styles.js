@@ -10,10 +10,11 @@ const {
 } = Colors;
 
 // Login - Register. is too much equals, so i use the style from here instead
+
 const Styles = {
   Container: `
-    
-    height: 100vh;
+  
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
