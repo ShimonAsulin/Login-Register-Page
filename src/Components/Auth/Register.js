@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Container = styled.div`
-  background-color: ${secondary1Color};
+  background-color: ${primary2Color};
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -31,14 +31,7 @@ const Container = styled.div`
 `;
 
 const Box = styled.div`
-  font-family: 'Montserrat', sans-serif;
-    background-color: ${whiteColor};
-    width: 250px;
-    border-radius: 4px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    display: flex;
-    flex-direction: column;
-    padding: 1.4em;
+  ${Style.Box} 
 `;
 
 const Title = styled.h3`
@@ -70,19 +63,12 @@ const Button = styled.button`
 `;
 
 const SignUpText = styled.h5`
-  color: ${primary1Color};
-  text-align: center;
-  font-weight: 500;
-  padding: 1rem;
+  ${Style.SignUpText}
 `;
 
-const SignUpLink = styled.a`
-  color: ${primary2Color};
-  font-weight: 500;
-  font-size: 0.8rem;
-  text-decoration: none;
-  text-align: center;
-  
+const SignUpLink = styled(Link)`
+  color:${secondary1Color};
+  ${Style.SignUpLink}
 `;
 
 
@@ -108,13 +94,14 @@ const Register = () => {
     e.preventDefault();
     console.log(formData);
   };
+
   return (
     <div>
       <Container>
         <Box>
           <GlobalStyle whiteColor />
           <Title>Register</Title>
-          <SubTitle>join projects and create projects of your own!</SubTitle>
+          <SubTitle>join and create projects🏆</SubTitle>
           <Form onSubmit={handleSubmit}>
             <InputUserName
               placeholder="Username"
@@ -155,9 +142,7 @@ const Register = () => {
             <Button>Register</Button>
           </Form>
             <SignUpText ignUpText>Alredy signed up?</SignUpText>
-            <SignUpLink >
-            <Link Link to="/Login">Login</Link>
-            </SignUpLink>
+            <SignUpLink Link to="/Login">Login</SignUpLink> 
         </Box>
       </Container>
     </div>

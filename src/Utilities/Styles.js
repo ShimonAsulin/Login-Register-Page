@@ -2,7 +2,7 @@ import Colors from "./Colors";
 
 const {
   primary1Color,
-  // primary2Color,
+  primary2Color,
   secondary1Color,
   // secondary2Color,
   blackColor,
@@ -12,7 +12,7 @@ const {
 // Login - Register. is too much equals, so i use the style from here instead
 const Styles = {
   Container: `
-    background-color: ${secondary1Color};
+    
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -55,17 +55,23 @@ const Styles = {
     padding: 0.55em 0.6em;
     border: none;
     border-radius: 4px;
-    background-color: ${primary1Color};
-    color: ${whiteColor};
     font-weight: 500;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
     margin: 0.7em auto 0;
-    &:hover {
-      color: ${secondary1Color};
-    }
-    transition: color 0.5s ease;
-  `
+  `,
+  SignUpText: `
+    color: ${primary1Color};
+    text-align: center;
+    font-weight: 500;
+    margin: 2em 0 1em 0;
+  `,
+  SignUpLink: `
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+  `,
 };
 
 export default Styles;

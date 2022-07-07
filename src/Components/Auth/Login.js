@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components/macro";
+import Style from "../../Utilities/Styles";
 import Colors from "../../Utilities/Colors";
 import { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
@@ -16,38 +17,22 @@ const GlobalStyle = createGlobalStyle`
 
 
 const Container = styled.div`
-  background-color: ${primary2Color};
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: ${secondary1Color};
+  ${Style.Container};
   `;
   
-  const Box = styled.div`
-  font-family: 'Montserrat', sans-serif;
-    background-color: ${whiteColor};
-    width: 250px;
-    border-radius: 4px;
-    box-shadow: rgba(100, 100, 111, 1) 0px 0px 29px 0px;
-    display: flex;
-    flex-direction: column;
-    padding: 1.4em;
+const Box = styled.div`
+  ${Style.Box}  
 `;
 
+
+
 const Title = styled.h3`
-  color: ${primary1Color};
-  justify-content: flex-start;
-  margin: .5em 0;
-  font-weight: 600;
+  ${Style.Title}
 `;
 
 const SubTitle = styled.h5`
-  color: ${blackColor};
-  justify-content: flex-start;
-  margin: .3em 0;
-  font-weight: 500;
-
+  ${Style.SubTitle}
 `;
 
 const Form = styled.form`
@@ -56,51 +41,29 @@ const Form = styled.form`
 `
 
 const Input = styled.input`
-  font-family: "Karla", sans-serif;
-  border-radius: 5px;
-  border: 1px solid ${primary1Color};
-  text-indent: 5px;
-  padding: 1em 0;
-  margin: .7em 0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  ${Style.Input}
 `;
-const InputPassword = styled(Input)`
-
+const InputPassword = styled.input`
+  ${Style.Input}
 `;
-const InputName = styled(Input)`
+const InputName = styled.input`
+  ${Style.Input}
 `;
 
 const Button = styled.button`
-  padding: .55em .6em;
-  border: none;
-  border-radius: 4px;
   background-color: ${primary1Color};
   color: ${whiteColor};
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  margin: .7em auto 0;
-  transition: color 0.5s ease;
-`
+  ${Style.Button};
+`;
 
-const SignUp = styled.h5`
-  color: ${primary1Color};
-  text-align: center;
-  font-weight: 500;
-  margin: 2em 0 1em 0;
-`
+const SignUpText = styled.h5`
+  ${Style.SignUpText};
+`;
 
-const SignUpLink = styled.a`
+const SignUpLink = styled(Link)`
   color: ${secondary1Color};
-  text-align: center;
-  font-weight: 500;
-  font-size: .8rem;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  };
-`
+  ${Style.SignUpLink};
+`;
 
 const Login = () => {
   
@@ -145,10 +108,8 @@ const Login = () => {
            />
           <Button>Login</Button>
         </Form>
-        <SignUp>Haven't signed up yet?</SignUp>
-        <SignUpLink href="#">
-         <Link Link to="/Register">Register</Link>
-        </SignUpLink>
+        <SignUpText>Haven't signed up yet?</SignUpText>
+         <SignUpLink Link to="/Register">Register</SignUpLink>
       </Box>
       </Container>
     </div>
